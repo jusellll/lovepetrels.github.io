@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Petrels Love</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Petrels Love</h1>
+    <nav>
+      <ul>
+        <li><button class="nav-btn" data-target="home">Beranda</button></li>
+        <li><button class="nav-btn" data-target="features">Features</button></li>
+        <li><button class="nav-btn" data-target="gallery">Gallery</button></li>
+        <li><button class="nav-btn" data-target="music">Music</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+   <!-- Beranda -->
+<section id="home" class="section active">
+    <h2>Where Love Stories Begin: Crafting Moments That Last Forever.</h2>
+    <p>You and I are like two stars in the vast universe, perfectly aligned and shining brighter together; every adventure we embark on, whether it’s a spontaneous road trip or just binge-watching our favorite shows, feels like a new chapter in our epic love story.</p>
+    
+    <!-- Section for vibes and fun -->
+    <div class="vibes">
+        <h3>Our Vibes</h3>
+        <p>Every moment with you is like a vibe that never fades. From spontaneous adventures to heart-to-heart talks, each chapter we write together feels like a piece of art.</p>
+      </div>
+    
+    <!-- Section for love quotes -->
+    <div class="love-quotes">
+      <h3>Love Quotes, Because Why Not?</h3>
+      <p>"You’re not my type. You’re my only type."</p>
+      <p>"You’re the peanut butter to my jelly, the avocado to my toast."</p>
+    </div>
+  
+    <div class="button-container">
+        <button onclick="showLoveVibes()">Click for Love Vibes</button>
+        <div id="love-vibes-container" class="hidden-container">
+          <p id="random-quote"></p>
+        </div>
+      </div>
+</section>
+
+    <!-- Features -->
+    <section id="features" class="section hidden">
+      <h2>Features</h2>
+      <div class="feature">
+        <h3>Love Calculator</h3>
+        <input type="text" id="name1" placeholder="Nama Kamu">
+        <input type="text" id="name2" placeholder="Nama Pasangan">
+        <button onclick="calculateLove()">Hitung Cinta</button>
+        <p id="love-result" class="hidden"></p>
+      </div>
+
+      <div class="feature">
+        <h3>Personalized Love Quotes</h3>
+        <button onclick="generateQuote()">Dapatkan Quotes</button>
+        <p id="quote-result"></p>
+      </div>
+
+      <div class="feature">
+        <h3>Daily Compliment Generator</h3>
+        <button onclick="generateCompliment()">Dapatkan Pujian</button>
+        <p id="compliment-result"></p>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+<section id="gallery" class="section hidden">
+    <h2>Gallery Petrels</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="images/petrels.jpg" alt="Prettiest" onclick="showCaption(this)" />
+        <p class="caption">Prettiest</p>
+        <div class="hidden-text">"Kamu tuh kayak sunset, selalu bikin orang berhenti buat nikmatin keindahan."</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/sayang.jpg" alt="Charming" onclick="showCaption(this)" />
+        <p class="caption">Charming</p>
+        <div class="hidden-text">"Kalau cinta itu seni, kamu tuh masterpiece yang nggak ada tandingannya."</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/cinta.jpg" alt="Radiant" onclick="showCaption(this)" />
+        <p class="caption">Radiant</p>
+        <div class="hidden-text">"Kamu itu seperti dua bintang di langit yang berbeda, tapi sinarmu tetap bisa menyatu dan saling melengkapi. Meskipun kita berdoa dengan cara yang berbeda, kita tetap bisa saling menguatkan, karena cinta kita lebih besar dari perbedaan itu."</div>
+      </div>      
+      <div class="gallery-item">
+        <img src="images/love.jpg" alt="Cute" onclick="showCaption(this)" />
+        <p class="caption">Cute</p>
+        <div class="hidden-text">"Kamu kayak bintang di langit malam, jauh tapi selalu bikin hati hangat."</div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Music -->
+    <section id="music" class="section hidden">
+      <h2>Music</h2>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2SVuMxEnxErsEw5LA7u8Hx?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with Albatros</p>
+  </footer>
+</body>
+</html>
